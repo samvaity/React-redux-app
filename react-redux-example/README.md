@@ -1,6 +1,6 @@
 ## Folder Structure
 
-After creation, your project should look like this:
+The project structure looks like this:
 
 ```
 my-app/

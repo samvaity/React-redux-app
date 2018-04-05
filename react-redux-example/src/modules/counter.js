@@ -2,9 +2,12 @@ export const INCREMENT_REQUESTED = 'counter/INCREMENT_REQUESTED'
 export const INCREMENT = 'counter/INCREMENT'
 export const DECREMENT_REQUESTED = 'counter/DECREMENT_REQUESTED'
 export const DECREMENT = 'counter/DECREMENT'
+export const SHOW = 'counter/SHOW'
+export const HIDE = 'counter/HIDE'
 
 const initialState = {
   count: 0,
+  relatedQ: "",
   isIncrementing: false,
   isDecrementing: false
 }
@@ -35,6 +38,18 @@ export default (state = initialState, action) => {
         ...state,
         count: state.count - 1,
         isDecrementing: !state.isDecrementing
+      }
+
+    case SHOW:
+      return {
+        ...state,
+        relatedQ: "This is your related question"
+      }
+
+    case HIDE:
+      return {
+        ...state,
+        relatedQ: ""
       }
 
     default:
@@ -91,5 +106,21 @@ export const decrementAsync = () => {
         type: DECREMENT
       })
     }, 3000)
+  }
+}
+
+export const showQuestion = () => {
+  return dispatch => {
+    dispatch({
+      type: SHOW
+    })
+  }
+}
+
+export const hideQuestion = () => {
+  return dispatch => {
+    dispatch({
+      type: HIDE
+    })
   }
 }
