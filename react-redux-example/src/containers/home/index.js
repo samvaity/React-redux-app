@@ -4,9 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import {
   increment,
-  incrementAsync,
   decrement,
-  decrementAsync,
   showQuestion,
   hideQuestion
 } from '../../modules/counter'
@@ -40,9 +38,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   increment,
-  incrementAsync,
   decrement,
-  decrementAsync,
   changePage: () => push('/about-us'),
   showQuestion,
   hideQuestion,

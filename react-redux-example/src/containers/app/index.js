@@ -7,7 +7,6 @@ const App = () => (
   <div>
     <header>
       <Link to="/">Home</Link> <br />
-      <Link to="/about-us">About</Link>
     </header>
 
     <main>
